@@ -1,0 +1,26 @@
+.page-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+img {
+  object-fit: cover;
+}
+
+.hide-desktop {
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+}
+
+.p-1 {
+  padding: 8px;
+}

@@ -1,0 +1,128 @@
+// Header
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 100;
+  background-color: $white;
+  border-bottom: 1px solid $black;
+}
+
+// Nav
+.nav {
+  &__link {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}
+
+// Content
+.content {
+  padding-top: 160px;
+  margin-bottom: 40px;
+  @media screen and (min-width: 769px) {
+    display: flex;
+  }
+  &__details {
+    @media screen and (min-width: 769px) {
+      display: flex;
+      .content__img--right {
+        margin-right: 10px;
+      }
+    }
+  }
+  &__left {
+    flex: 1 1 66.7%;
+    margin-right: 5px;
+  }
+  &__right {
+    margin-left: 5px;
+    flex: 1 1 33.3%;
+  }
+  &__bottom {
+    @media screen and (max-width: 768px) {
+      display: flex;
+      align-items: stretch;
+    }
+  }
+  &__links {
+    &--left,
+    &--right {
+      @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 50%;
+      }
+    }
+  }
+  &__link {
+    border: 1px solid $black;
+    &--left,
+    &--right {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      @media screen and (max-width: 768px) {
+        height: 100%;
+        display: flex;
+      }
+    }
+    &--left {
+      @media screen and (min-width: 769px) {
+        display: grid;
+        grid-template-rows: repeat(2, 50%);
+        .content__img--left {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        margin-right: 10px;
+        flex-direction: column;
+        .content__title {
+          margin: auto 0;
+        }
+      }
+    }
+    &--right {
+      display: block;
+      @media screen and (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+  &__img {
+    &--left {
+      @media screen and (max-width: 768px) {
+        height: 50%;
+      }
+    }
+  }
+  .hero {
+    position: relative;
+    margin-bottom: 10px;
+    &__title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+// Footer
+.footer {
+  margin-top: auto;
+  text-align: center;
+  border-top: 1px solid $black;
+}
