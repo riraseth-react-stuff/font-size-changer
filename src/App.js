@@ -1,16 +1,14 @@
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
-import FontChanger from './components/FontChanger';
-import Footer from './components/Footer';
-
+import PageContent from './components/PageContent';
+import GlobalStyle from './components/GlobalStyle';
+import { FontContext } from './context/FontContext';
+import { useContext } from 'react';
 function App() {
+  const { fontSize } = useContext(FontContext);
   return (
-    <div className="page-container">
-      <Header></Header>
-      <Main></Main>
-      <FontChanger></FontChanger>
-      <Footer></Footer>
-    </div>
+    <>
+      <GlobalStyle size={fontSize}></GlobalStyle>
+      <PageContent></PageContent>
+    </>
   );
 }
 

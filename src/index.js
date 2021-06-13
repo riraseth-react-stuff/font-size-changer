@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { FontProvider } from './context/FontContext';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <FontProvider>
+      <App />
+    </FontProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

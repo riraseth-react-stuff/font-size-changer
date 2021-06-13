@@ -6,9 +6,9 @@ const Link = ({ url, title, img_url, text, link_type }) => {
     <>
       {link_type === 'right' ? (
         <a href={url} className="content__link content__link--right p-1">
-          <h2 class="content__title">{title}</h2>
+          <h2 className="content__title">{title}</h2>
           {width > breakpoint ? (
-            <div class="content__details">
+            <div className="content__details">
               <img
                 src={img_url}
                 alt=""

@@ -17,9 +17,35 @@
 
 // Nav
 .nav {
+  &__hamburger {
+    @media screen and (min-width: 769px) {
+      display: none;
+    }
+  }
+  &__checkbox {
+    display: none;
+  }
+  &__container {
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      padding: 20px;
+      right: 0;
+      display: none;
+      background-color: $white;
+    }
+  }
+  #menu-toggle:checked + &__container {
+    display: flex;
+    flex-direction: column;
+  }
   &__link {
     &:not(:last-child) {
-      margin-right: 16px;
+      @media screen and (min-width: 769px) {
+        margin-right: 16px;
+      }
+      @media screen and (max-width: 768px) {
+        margin-bottom: 16px;
+      }
     }
   }
 }
@@ -51,6 +77,7 @@
     @media screen and (max-width: 768px) {
       display: flex;
       align-items: stretch;
+      margin-bottom: 10px;
     }
   }
   &__links {
@@ -79,6 +106,7 @@
       @media screen and (min-width: 769px) {
         display: grid;
         grid-template-rows: repeat(2, 50%);
+        margin-bottom: 10px;
         .content__img--left {
           height: 100%;
           width: 100%;
@@ -116,7 +144,45 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      text-align: center;
     }
+    &__img {
+      width: 100%;
+    }
+  }
+}
+
+// Font changer
+.font-changer {
+  height: 150px;
+  border: 1px solid $black;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  &__text {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  &__controls {
+    margin-right: 20px;
+    position: relative;
+  }
+  &__button {
+    width: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  &__limit {
+    position: absolute;
+    right: 10px;
+    bottom: -30px;
   }
 }
 

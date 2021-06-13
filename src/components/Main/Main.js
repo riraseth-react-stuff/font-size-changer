@@ -1,6 +1,8 @@
 import useScreenWidth from '../../Hooks/useScreenWidth';
 import Hero from './Hero';
 import Links from './Links';
+import FontChanger from './FontChanger';
+
 import { rightLinks, leftLinks } from '../../data';
 const Main = () => {
   const { width } = useScreenWidth();
@@ -12,6 +14,7 @@ const Main = () => {
           <section className="content__left">
             <Hero></Hero>
             <Links links={leftLinks}></Links>
+            <FontChanger></FontChanger>
           </section>
           <section className="content__right">
             <Links links={rightLinks}></Links>
@@ -26,6 +29,7 @@ const Main = () => {
             <Links links={leftLinks}></Links>
             <Links links={rightLinks}></Links>
           </section>
+          <FontChanger></FontChanger>
         </>
       )}
     </main>
