@@ -112,6 +112,11 @@
     }
   }
   &__links {
+    &--left {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
     &--left,
     &--right {
       @media screen and (max-width: 768px) {
@@ -174,6 +179,7 @@
       @media screen and (min-width: 769px) {
         transition: $transition-timing;
         filter: grayscale(100) blur(2px);
+        height: auto;
       }
       @media screen and (max-width: 768px) {
         height: 50%;
