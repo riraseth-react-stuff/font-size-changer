@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <div className="hero">
       <img
-        src="https://source.unsplash.com/random/800x500"
+        src="https://source.unsplash.com/6-C0VRsagUw/800x500"
         alt=""
         className="hero__img"
       />

@@ -5,7 +5,10 @@ const Link = ({ url, title, img_url, text, link_type }) => {
   return (
     <>
       {link_type === 'right' ? (
-        <a href={url} className="content__link content__link--right p-1">
+        <a
+          href={url}
+          className="content__link content__link--right p-1 border-10"
+        >
           <h2 className="content__title">{title}</h2>
           {width > breakpoint ? (
             <div className="content__details">
@@ -20,7 +23,7 @@ const Link = ({ url, title, img_url, text, link_type }) => {
           <span className="hide-desktop">link ></span>
         </a>
       ) : (
-        <a href={url} className="content__link content__link--left">
+        <a href={url} className="content__link content__link--left border-10">
           <img
             src={img_url}
             alt=""

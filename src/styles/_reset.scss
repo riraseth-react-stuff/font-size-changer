@@ -46,9 +46,11 @@ a {
   text-decoration-skip-ink: auto;
   text-decoration: none;
   color: inherit;
+  transition: $transition-timing;
 }
 
 img {
+  height: 100%;
   max-width: 100%;
   display: block;
 }

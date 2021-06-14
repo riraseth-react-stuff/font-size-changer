@@ -24,3 +24,14 @@ img {
 .p-1 {
   padding: 8px;
 }
+
+.border-10 {
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  overflow: hidden;
+}
+a.border-10 {
+  &:hover {
+    border-color: $color-secondary;
+  }
+}

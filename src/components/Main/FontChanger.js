@@ -10,9 +10,9 @@ const FontChanger = () => {
 
   return (
     showComponent && (
-      <div className="font-changer">
+      <div className="font-changer border-10">
         <span className="font-changer__close" onClick={handleClick}>
-          X
+          &#x274C;
         </span>
         <div className="font-changer__controls">
           <span className="font-changer__text">FONT SIZE: {fontSize}%</span>

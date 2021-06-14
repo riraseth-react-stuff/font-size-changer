@@ -1,7 +1,7 @@
 const Nav = () => {
   return (
     <nav className="nav">
-      <label className="nav__hamburger" for="menu-toggle">
+      <label className="nav__hamburger" htmlFor="menu-toggle">
         MENU
       </label>
       <input type="checkbox" id="menu-toggle" className="nav__checkbox" />
