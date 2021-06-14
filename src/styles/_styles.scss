@@ -14,11 +14,11 @@
   background-color: $color-primary;
   border-bottom: 1px solid $color-primary;
   transition: $transition-timing;
-  &__logo {
-    border-radius: 10px;
-  }
   &__link {
     height: 100%;
+  }
+  &__logo {
+    border-radius: 10px;
   }
   &--scrolled {
     border-color: $border-color;
@@ -195,6 +195,7 @@
     margin-bottom: 10px;
     overflow: hidden;
     border-radius: 10px;
+    display: block;
     &__title {
       position: absolute;
       top: 50%;
