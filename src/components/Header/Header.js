@@ -14,7 +14,6 @@ const Header = () => {
     watchScroll();
     return () => window.removeEventListener('scroll', scroll);
   }, []);
-  console.log(positionY);
   return (
     <header
       className={`header container ${positionY > 40 ? 'header--scrolled' : ''}`}

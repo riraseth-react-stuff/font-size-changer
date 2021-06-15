@@ -17,13 +17,13 @@ const FontChanger = () => {
         <div className="font-changer__controls">
           <span className="font-changer__text">FONT SIZE: {fontSize}%</span>
           <button
-            className="font-changer__button"
+            className="font-changer__button font-changer__button--minus"
             onClick={() => handleChange('decrement')}
           >
             -
           </button>
           <button
-            className="font-changer__button"
+            className="font-changer__button font-changer__button--plus"
             onClick={() => handleChange('increment')}
           >
             +

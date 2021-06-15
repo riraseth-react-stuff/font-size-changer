@@ -256,8 +256,15 @@
     font-size: 1rem;
     transition: all 0.2s;
     position: relative;
-    &:hover {
-      box-shadow: 0px 0px 3px 1px #000000;
+    &--minus {
+      &:hover {
+        box-shadow: 0px 0px 3px 1px #ff4d4d;
+      }
+    }
+    &--plus {
+      &:hover {
+        box-shadow: 0px 0px 3px 1px #4d4dff;
+      }
     }
   }
   &__limit {
