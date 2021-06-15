@@ -9,6 +9,7 @@ export const FontProvider = ({ children }) => {
   });
   const [showModal, setShowModal] = useState(false);
   const [clickedLimit, setClickedLimit] = useState(false);
+  const [showComponent, setShowComponent] = useState(true);
 
   const handleChange = (action) => {
     if (fontSize < 125 && action === 'increment') {
@@ -24,6 +25,10 @@ export const FontProvider = ({ children }) => {
       setShowModal(true);
       setClickedLimit(!clickedLimit);
     }
+  };
+
+  const handleClick = () => {
+    setShowComponent(false);
   };
 
   useEffect(() => {
@@ -43,7 +48,9 @@ export const FontProvider = ({ children }) => {
   }, [clickedLimit]);
 
   return (
-    <FontContext.Provider value={{ fontSize, handleChange, showModal }}>
+    <FontContext.Provider
+      value={{ fontSize, handleChange, showModal, handleClick, showComponent }}
+    >
       {children}
     </FontContext.Provider>
   );

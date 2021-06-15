@@ -1,12 +1,9 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { FontContext } from '../../context/FontContext';
 
 const FontChanger = () => {
-  const { fontSize, handleChange, showModal } = useContext(FontContext);
-  const [showComponent, setShowComponent] = useState(true);
-  const handleClick = () => {
-    setShowComponent(false);
-  };
+  const { fontSize, handleChange, showModal, handleClick, showComponent } =
+    useContext(FontContext);
 
   return (
     showComponent && (
