@@ -12,17 +12,11 @@
   padding-bottom: 10px;
   z-index: 100;
   background-color: $color-primary;
-  border-bottom: 1px solid $color-primary;
-  transition: $transition-timing;
   &__logo {
     border-radius: 10px;
   }
   &__link {
     height: 100%;
-  }
-  &--scrolled {
-    border-color: $border-color;
-    height: 60px;
   }
 }
 
@@ -56,23 +50,6 @@
     position: relative;
     @media screen and (max-width: 768px) {
       transition: all 0s;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background-color: $color-secondary;
-      left: 0;
-      bottom: -3px;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: $transition-timing;
-    }
-    &:hover {
-      &::after {
-        transform: scaleX(1);
-      }
     }
     &:not(:last-child) {
       @media screen and (min-width: 769px) {
@@ -112,19 +89,22 @@
     }
   }
   &__links {
+    &--left {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
     &--left,
     &--right {
       @media screen and (max-width: 768px) {
         display: flex;
         flex-direction: column;
         flex: 1 1 50%;
+        gap: 0;
       }
     }
   }
   &__link {
-    &:hover {
-      border-color: $color-secondary;
-    }
     &--left,
     &--right {
       margin-bottom: 10px;
@@ -136,11 +116,6 @@
     &--left {
       @media screen and (min-width: 769px) {
         display: block;
-        &:hover {
-          .content__img--left {
-            filter: grayscale(0) blur(0);
-          }
-        }
       }
       @media screen and (max-width: 768px) {
         margin-right: 10px;
@@ -153,11 +128,6 @@
     &--right {
       @media screen and (min-width: 769px) {
         display: block;
-        &:hover {
-          .content__img--right {
-            filter: sepia(0);
-          }
-        }
       }
 
       @media screen and (max-width: 768px) {
@@ -171,10 +141,6 @@
     &--left {
       max-height: 300px;
       width: 100%;
-      @media screen and (min-width: 769px) {
-        transition: $transition-timing;
-        filter: grayscale(100) blur(2px);
-      }
       @media screen and (max-width: 768px) {
         height: 50%;
       }
@@ -184,17 +150,13 @@
         margin-right: 15px;
         max-width: 90px;
         max-height: 120px;
-        filter: sepia(100);
-        transition: $transition-timing;
-        border-radius: 10px;
       }
     }
   }
   .hero {
     position: relative;
     margin-bottom: 10px;
-    overflow: hidden;
-    border-radius: 10px;
+    display: block;
     &__title {
       position: absolute;
       top: 50%;
@@ -204,13 +166,6 @@
     }
     &__img {
       width: 100%;
-      @media screen and (min-width: 769px) {
-        transform: scale(1.1);
-        transition: $transition-timing;
-        &:hover {
-          transform: scale(1);
-        }
-      }
     }
   }
 }
@@ -222,6 +177,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  border: 1px solid $border-color;
   &__text {
     display: inline-block;
     margin-right: 10px;
@@ -248,9 +204,6 @@
     font-size: 1rem;
     transition: all 0.2s;
     position: relative;
-    &:hover {
-      box-shadow: 0px 0px 3px 1px #000000;
-    }
   }
   &__limit {
     position: absolute;
