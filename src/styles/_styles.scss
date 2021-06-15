@@ -152,7 +152,9 @@
         margin-right: 10px;
         flex-direction: column;
         .content__title {
-          margin: auto 0;
+          display: flex;
+          align-items: center;
+          height: 50%;
         }
       }
     }
