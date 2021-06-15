@@ -29,7 +29,7 @@
 // Nav
 .nav {
   &__hamburger {
-    @media screen and (min-width: 769px) {
+    @include desktop {
       display: none;
     }
   }
@@ -37,7 +37,7 @@
     display: none;
   }
   &__container {
-    @media screen and (max-width: 768px) {
+    @include mobile {
       position: absolute;
       padding: 20px;
       right: 0;
@@ -54,7 +54,7 @@
   }
   &__link {
     position: relative;
-    @media screen and (max-width: 768px) {
+    @include mobile {
       transition: all 0s;
     }
     &::after {
@@ -75,10 +75,10 @@
       }
     }
     &:not(:last-child) {
-      @media screen and (min-width: 769px) {
+      @include desktop {
         margin-right: 16px;
       }
-      @media screen and (max-width: 768px) {
+      @include mobile {
         margin-bottom: 16px;
       }
     }
@@ -89,11 +89,11 @@
 .content {
   padding-top: 90px;
   margin-bottom: 40px;
-  @media screen and (min-width: 769px) {
+  @include desktop {
     display: flex;
   }
   &__details {
-    @media screen and (min-width: 769px) {
+    @include desktop {
       display: flex;
     }
   }
@@ -106,7 +106,7 @@
     flex: 1 1 33.3%;
   }
   &__bottom {
-    @media screen and (max-width: 768px) {
+    @include mobile {
       display: flex;
       align-items: stretch;
     }
@@ -119,7 +119,7 @@
     }
     &--left,
     &--right {
-      @media screen and (max-width: 768px) {
+      @include mobile {
         display: flex;
         flex-direction: column;
         flex: 1 1 50%;
@@ -134,13 +134,13 @@
     &--left,
     &--right {
       margin-bottom: 10px;
-      @media screen and (max-width: 768px) {
+      @include mobile {
         height: 100%;
         display: flex;
       }
     }
     &--left {
-      @media screen and (min-width: 769px) {
+      @include desktop {
         display: block;
         &:hover {
           .content__img--left {
@@ -148,13 +148,13 @@
           }
         }
       }
-      @media screen and (max-width: 768px) {
+      @include mobile {
         margin-right: 10px;
         flex-direction: column;
       }
     }
     &--right {
-      @media screen and (min-width: 769px) {
+      @include desktop {
         display: block;
         &:hover {
           .content__img--right {
@@ -163,7 +163,7 @@
         }
       }
 
-      @media screen and (max-width: 768px) {
+      @include mobile {
         align-items: center;
         justify-content: space-between;
       }
@@ -173,14 +173,14 @@
     &--left {
       max-height: 300px;
       width: 100%;
-      @media screen and (min-width: 769px) {
+      @include desktop {
         transition: $transition-timing;
         filter: grayscale(100) blur(2px);
         height: auto;
       }
     }
     &--right {
-      @media screen and (min-width: 769px) {
+      @include desktop {
         margin-right: 15px;
         max-width: 90px;
         max-height: 120px;
@@ -205,7 +205,7 @@
     }
     &__img {
       width: 100%;
-      @media screen and (min-width: 769px) {
+      @include desktop {
         transform: scale(1.1);
         transition: $transition-timing;
         &:hover {
